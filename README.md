@@ -5,6 +5,14 @@ A displaying progress utility for Ruby.
 
 
 ## Usage
+### Description of Constructors's Argument
+name            |Description
+----------------|-------------------------------------------------------------------
+n               | number of loops
+desc            | progress's description
+bar_shape       | Bar's character to display. Default value is ["\e[42m \e[0m", "─"]
+datetime_format | Date and time format. Default value is '%%M:%S'.
+
 ### Simple Example
 ```ruby
 # 100 Loop
@@ -16,7 +24,7 @@ mdap(100, desc: 'Download') { sleep 0.01 }
 # Download: [##################───────] 21% (72/100) [37:26-37:29 64.371566it/s]
 
 # Specify Datetime Format
-mdap(100, datetime_format: "%Y:%M:%S") { sleep 0.01 }
+mdap(100, datetime_format: "%H:%M:%S") { sleep 0.01 }
 # Download: [##############─────] 21% (72/100) [03:37:26-03:37:29 64.371566it/s]
 
 # Specify Bar Shape
