@@ -11,7 +11,7 @@ name            |Description
 n               | number of loops
 desc            | progress's description
 bar_shape       | Bar's character to display. Default value is ["\e[42m \e[0m", "─"]
-datetime_format | Date and time format. Default value is '%%M:%S'.
+datetime_format | Date and time format. Default value is '%M:%S'.
 
 ### Simple Example
 ```ruby
