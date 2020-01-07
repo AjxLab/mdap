@@ -36,5 +36,3 @@ def mdap(n, desc:nil, bar_shape:["\e[42m \e[0m", "─"],
     yield
   end
 end
-
-mdap(1000) { sleep 0.01 }
