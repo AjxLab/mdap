@@ -3,7 +3,7 @@ require 'time'
 
 
 def mdap(n, desc:nil, bar_shape:["\e[42m \e[0m", "─"],
-         datetime_format:"%H:%M:%S.%L"
+         datetime_format:"%M:%S"
         )
   ## -----*----- Progress Bar -----*----- ##
   dt_start = Time.new
@@ -13,9 +13,10 @@ def mdap(n, desc:nil, bar_shape:["\e[42m \e[0m", "─"],
     dt_now = Time.new
 
     # 出力フォーマット
-    out_str = sprintf("[] %d%s (%d/%d) [%s-%s]", i*100/n, '%', i, n,
+    out_str = sprintf("[] %d%% (%d/%d) [%s-%s %fit/s]", i*100/n, i, n,
                       dt_start.strftime(datetime_format),
-                      dt_now.strftime(datetime_format)
+                      dt_now.strftime(datetime_format),
+                      i / (dt_now-dt_start)
                      )
     out_str = "#{desc}: #{out_str}"  unless desc.nil?
 
