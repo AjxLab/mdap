@@ -57,9 +57,8 @@ def mdap(n, desc:nil, bar_shape:["\e[42m \e[0m", "─"],
       progress = i
       outer.call
       yield
-    rescue => e
+    rescue
       Timer::exit
-      return e
     end
   end
 
