@@ -3,6 +3,7 @@ mdap
 
 A displaying progress utility for Ruby.
 
+![](demo.gif)
 
 ## Usage
 ### Description of Constructors's Argument
