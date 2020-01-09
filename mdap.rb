@@ -3,7 +3,7 @@ require 'time'
 
 
 def mdap(n, desc:nil, bar_shape:["\e[42m \e[0m", "─"],
-         indicator:"⠟⠯⠷⠾⠽⠻", datetime_format:"%M:%S"
+         indicator:"⠻⠽⠾⠷⠯⠟", datetime_format:"%M:%S"
         )
   ## -----*----- Progress Bar -----*----- ##
   # ステータス
