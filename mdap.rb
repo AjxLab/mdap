@@ -6,6 +6,14 @@ def mdap(n, desc:nil, bar_shape:["\e[42m \e[0m", "─"],
          datetime_format:"%M:%S", indicator:"⠟⠿⠻⠾⠿⠷"
         )
   ## -----*----- Progress Bar -----*----- ##
+  # タイマー設定（インジケータ用）
+  Timer::set_frame_rate(500)
+  index = 0
+  c_indicator = indicator[index]
+  Timer::timer {
+    index += 1
+    c_indicator = indicator[index%indicator.length]
+  }
   dt_start = Time.new
 
   1.upto(n) do |i|
@@ -14,7 +22,7 @@ def mdap(n, desc:nil, bar_shape:["\e[42m \e[0m", "─"],
 
     # 出力フォーマット
     out_str = sprintf("[] %c%d%% (%d/%d) [%s-%s %fit/s]",
-                      indicator[i%indicator.length], i*100/n, i, n,
+                      c_indicator, i*100/n, i, n,
                       dt_start.strftime(datetime_format),
                       dt_now.strftime(datetime_format),
                       i / (dt_now-dt_start)
