@@ -1,8 +1,8 @@
 require './mdap.rb'
 
-# 100 Loop (no indicator)
-puts "100 Loop (no indicator)"
-mdap(300, indicator:nil) { sleep 0.01 }
+# 100 Loop
+puts "100 Loop"
+mdap(300) { sleep 0.01 }
 
 # Specify Desc
 puts "Specify Desc"
