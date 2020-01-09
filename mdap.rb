@@ -37,3 +37,29 @@ def mdap(n, desc:nil, bar_shape:["\e[42m \e[0m", "─"],
     yield
   end
 end
+
+
+module Timer
+  def set_frame_rate(time)
+    ## -----*----- フレームレートの初期化 -----*----- ##
+    @frame_rate = time
+  end
+
+  def timer(join: false, sleep: true)
+    ## -----*----- タイマー設定（サブスレッド） -----*----- ##
+    @th = Thread.new {
+      loop do
+        yield
+        sleep 60.0 / @frame_rate if sleep
+      end
+    }
+    @th.join if join
+  end
+
+  def exit
+    ## -----*----- タイマー処理終了 -----*----- ##
+    @th.kill
+  end
+
+  module_function :set_frame_rate, :timer, :exit
+end
