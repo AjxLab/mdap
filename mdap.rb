@@ -76,7 +76,7 @@ module Timer
     ## -----*----- タイマー設定（サブスレッド） -----*----- ##
     @th = Thread.new {
       loop do
-        yield
+        yield i-1
         sleep 60.0 / @frame_rate if sleep
       end
     }
