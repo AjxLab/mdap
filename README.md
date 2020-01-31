@@ -1,7 +1,6 @@
 mdap
 ====
 
-[![Build Status](https://api.travis-ci.org/AjxLab/mdap.svg?branch=master)](https://travis-ci.org/AjxLab/mdap)
 [![Gem Version](https://badge.fury.io/rb/mdap.svg)](https://rubygems.org/gems/mdap/)
 [![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE.txt)
 
