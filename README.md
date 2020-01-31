@@ -10,6 +10,11 @@ A displaying progress utility for Ruby.
 
 ![](demo.gif)
 
+
+## Requirement
+- Ruby 2.3 or above
+
+
 ## Usage
 ### Description of Constructors's Argument
 name            |Description
@@ -52,7 +57,12 @@ mdap(100, indicator:"-\\|/")
 # [#########################──────────] -21% (72/100) [37:26-37:29 64.371566it/s]
 ```
 
+
 ## Installation
 ```sh
 $ gem install mdap
 ```
+
+
+## Contributing
+Bug reports and pull requests are welcome on GitHub at [https://github.com/AjxLab/mdap](https://github.com/AjxLab/mdap).
