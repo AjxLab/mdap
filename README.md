@@ -1,6 +1,11 @@
 mdap
 ====
 
+[![Build Status](https://api.travis-ci.org/AjxLab/mdap.svg?branch=master)](https://travis-ci.org/AjxLab/mdap)
+[![Gem Version](https://badge.fury.io/rb/mdap.svg)](https://rubygems.org/gems/mdap/)
+[![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE.txt)
+
+
 A displaying progress utility for Ruby.
 
 ![](demo.gif)
@@ -17,6 +22,8 @@ datetime_format | Date and time format. Default value is '%M:%S'.
 
 ### Simple Example
 ```ruby
+require 'mdap'
+
 # 100 Loop
 mdap(100) { sleep 0.01 }
 # [#########################──────────] ⠟21% (72/100) [37:26-37:29 64.371566it/s]
@@ -47,6 +54,5 @@ mdap(100, indicator:"-\\|/")
 
 ## Installation
 ```sh
-$ git clone https://github.com/AjxLab/mdap
-$ cd mdap
+$ gem install mdap
 ```
