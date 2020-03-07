@@ -3,7 +3,7 @@ require 'time'
 require "mdap/version"
 
 
-def mdap(n, desc:nil, bar_shape:["\e[42m \e[0m", "─"],
+def mdap(n, echo_bar: true, desc:nil, bar_shape:["\e[42m \e[0m", "─"],
          indicator:"⠻⠽⠾⠷⠯⠟", datetime_format:"%M:%S"
         )
   ## -----*----- Progress Bar -----*----- ##
@@ -49,14 +49,14 @@ def mdap(n, desc:nil, bar_shape:["\e[42m \e[0m", "─"],
     Timer::timer {
       i_indicator += 1
       c_indicator = indicator[i_indicator%indicator.length]
-      outer.call
+      outer.call  if echo_bar
     }
   end
 
   1.upto(n) do |i|
     begin
       progress = i
-      outer.call
+      outer.call  if echo_bar
       yield i-1
     rescue => e
       p e
