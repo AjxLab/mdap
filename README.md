@@ -1,6 +1,7 @@
 mdap
 ====
 
+[![](https://github.com/AjxLab/mdap/workflows/build/badge.svg)](https://github.com/AjxLab/mdap/actions)
 [![Gem Version](https://badge.fury.io/rb/mdap.svg)](https://rubygems.org/gems/mdap/)
 [![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE.txt)
 
