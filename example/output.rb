@@ -1,4 +1,4 @@
-require './mdap.rb'
+require 'mdap'
 
 # 100 Loop
 puts "100 Loop"
@@ -14,4 +14,5 @@ mdap(300, datetime_format: "%H:%M:%S") { sleep 0.01 }
 
 # Specify Bar Shape
 puts "Specify Bar Shape"
-mdap(300, bar_shape: ["=", "."]) { sleep 0.01 }
+mdap(300, bar_shape: ["#", "─"]) { sleep 0.01 }
+

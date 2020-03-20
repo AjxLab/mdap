@@ -3,7 +3,7 @@ require 'time'
 require "mdap/version"
 
 
-def mdap(n, echo_bar: true, desc:nil, bar_shape:["\e[42m \e[0m", "─"],
+def mdap(n, echo_bar: true, desc:nil, bar_shape:["\e[42m \e[0m", "░"],
          indicator:"⠻⠽⠾⠷⠯⠟", datetime_format:"%M:%S"
         )
   ## -----*----- Progress Bar -----*----- ##
